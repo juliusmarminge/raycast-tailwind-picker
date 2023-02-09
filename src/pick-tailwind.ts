@@ -1,5 +1,6 @@
 import { Clipboard, closeMainWindow, showHUD } from "@raycast/api";
-import { toTailwind, pickColor } from "./utils";
+import { toTailwind } from "./tailwind";
+import { pickColor } from "./utils";
 
 export default async function command() {
   await closeMainWindow();
@@ -8,7 +9,6 @@ export default async function command() {
     const pickedColor = await pickColor();
     if (!pickedColor) return;
 
-    // TODO: Add support for other color palettes such as Radix Colors etc
     const tw = toTailwind(pickedColor);
 
     await Clipboard.copy(tw);
