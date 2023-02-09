@@ -1,8 +1,15 @@
 # Tailwind Color Picker
 
-A simple color picker for Tailwind CSS.
+A simple color picker for Tailwind CSS and Radix UI color palettes.
 
-## Getting started
+## How it works
+
+The extension is built in 2 parts:
+
+1. A Swift package that provides a native color picker. The picked color is then logged to stdout.
+2. The actual Raycast extension which invokes the native color picker, reads the stdout to get the picked RGBA color. It then translates the color to the closest color in the Tailwind or Radix UI color palette.
+
+## Devlopment
 
 This is a Turborepo with two workspaces, the root Raycast extension as well as a Swift package for the color picker.
 
@@ -24,4 +31,4 @@ npx turbo build
 npm run dev
 ```
 
-You will then see the `Pick Color` command in Raycast.
+You will then see the `Pick Radix Color` & `Pick Tailwind Color` commands in Raycast.

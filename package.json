@@ -1,12 +1,13 @@
 {
   "$schema": "https://www.raycast.com/schemas/extension.json",
-  "name": "tailwind-picker",
-  "title": "Tailwind Color Picker",
-  "description": "Tailwind CSS Color Picker",
+  "name": "palette-picker",
+  "title": "Color Palette Picker",
+  "description": "A simple color picker for Tailwind CSS and Radix UI color palettes.",
   "icon": "icon.png",
   "author": "juliusmarminge",
   "categories": [
-    "Design Tools"
+    "Design Tools",
+    "Developer Tools"
   ],
   "license": "MIT",
   "commands": [
@@ -18,7 +19,7 @@
     },
     {
       "name": "pick-radix",
-      "title": "Pick RadixUI Color",
+      "title": "Pick Radix Color",
       "description": "Pick a color and get the nearest Radix UI color",
       "mode": "no-view"
     }
